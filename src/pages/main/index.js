@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
 
+import './styles.css';
+
 export default class Main extends Component {
     state = {
         photos: []
@@ -17,10 +19,14 @@ export default class Main extends Component {
     }
 
     render() {
+        const { photos } = this.state;
+
         return (
             <div className="photos-list">
-                {this.state.photos.map(photos => (
-                    <h2 key={photos.id}>{photos.url}</h2>
+                {photos.map(photos => (
+                    <article key={photos.id}>
+                        <img src={photos.url} alt={photos.title}></img>
+                    </article>
                 ))}
             </div>
         )

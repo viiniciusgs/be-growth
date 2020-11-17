@@ -1,0 +1,18 @@
+.photos-list {
+    max-width: 700px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+}
+
+.photos-list article {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.photos-list article img {
+    width: 100px;
+    height: 100px;
+}
