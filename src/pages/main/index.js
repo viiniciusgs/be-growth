@@ -2,17 +2,27 @@ import React, { Component } from 'react';
 import api from '../../services/api';
 
 export default class Main extends Component {
-    componentDidMount() {
-        this.loadProducts();
+    state = {
+        photos: []
     }
 
-    loadProducts = async () => {
+    componentDidMount() {
+        this.loadPhotos();
+    }
+
+    loadPhotos = async () => {
         const response = await api.get('/photos');
 
-        console.log(response.data);
+        this.setState({ photos: response.data })
     }
 
     render() {
-        return <h1>Hello</h1>
+        return (
+            <div className="photos-list">
+                {this.state.photos.map(photos => (
+                    <h2 key={photos.id}>{photos.url}</h2>
+                ))}
+            </div>
+        )
     }
 }
