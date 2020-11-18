@@ -4,6 +4,8 @@ import api from '../../services/api';
 
 import Header from '../../components/Header';
 
+import Pagination from '@material-ui/lab/Pagination';
+
 import './styles.css';
 
 export default class Main extends Component {
@@ -67,7 +69,7 @@ export default class Main extends Component {
     }
 
     render() {
-        const { photos, page, searchPhoto } = this.state;
+        const { photos, searchPhoto } = this.state;
 
         if(searchPhoto) {
             return(
@@ -101,8 +103,11 @@ export default class Main extends Component {
                     })}
     
                     <div className="actions">
-                        <button disabled={page === 1} onClick={this.prevPage}>Anterior</button>
-                        <button disabled={page === photos.length} onClick={this.nextPage}>Próxima</button>
+                        <div className="pagination">
+                            <Pagination count={10} color='primary' variant="outlined" shape="rounded" onChange={(event, page) => {
+                                this.loadPhotos(page);
+                            }} />
+                        </div>
                     </div>
                 </main>
             </div>

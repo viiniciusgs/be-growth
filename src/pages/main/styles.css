@@ -22,7 +22,7 @@
     margin-bottom: 20px;
 }
 
-.photos-list .actions button {
+/* .photos-list .actions button {
     padding: 10px;
     border-radius: 5px;
     border: 0;
@@ -41,3 +41,7 @@
 .photos-list .actions button:not([disabled]):hover {
     opacity: 0.9;
 }
+
+.MuiButtonBase-root .Mui-selected {
+    color: black;
+} */
