@@ -69,34 +69,35 @@
 }
 
 
-#main .content {
+.content {
     width: 80vw;
     padding: 2rem 5rem;
     margin-bottom: 2rem;
 
     display: flex;
-    /* align-items: center; */
     justify-content: space-between;
 
     background: #fff;
     border: 0.1rem solid #ddd;
     border-radius: 0.5rem;
     box-shadow: 0.2rem 0.2rem 0.5rem #ddd;
+
+    position: relative;
 }
 
-#main article {
+.content article {
     display: flex;
     align-items: center;
 }
 
-#main article img {
+.content article img {
     width: 10rem;
     height: 10rem;
 
     border-radius: 2rem;
 }
 
-#main .description {
+.content .description {
     height: 100%;
     padding: 0 5rem;
 
@@ -105,21 +106,55 @@
     justify-content: space-between;
 }
 
-#main .description img {
-    width: 4rem;
-    height: 4rem;
+.content .description h1 {
+    font-size: 2rem;
+    font-weight: 300;
 }
 
-#main .description strong {
+.content .description .idS {
+    display: grid;
+    grid-template-columns: 5rem 10rem;
+}
+
+.content .description .idS img {
+    width: 4rem;
+    height: 4rem;
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.content .description .idS strong {
     display: flex;
 
     font-size: 1.5rem;
     font-weight: 500;
 }
 
-#main .description h1 {
-    font-size: 2rem;
-    font-weight: 300;
+.content button {
+    width: 3rem;
+    height: 3rem;
+
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    background: #fff;
+    border: none;
+}
+
+.content .favorite {
+    color: red;
+    cursor: pointer;
+}
+
+.content .favorite:hover {
+    opacity: 0.5;
+}
+
+.content .notFavorite:hover {
+    cursor: pointer;
+    color: red;
 }
 
 
