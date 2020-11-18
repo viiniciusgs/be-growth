@@ -1,26 +1,133 @@
-.photos-list {
-    width: 100%;
+#main {
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.photos-list article {
+.search {
+    padding: 2rem;
+}
+
+.search form {
+    width: clamp(20rem ,20vw, 30vw);
+    padding: 1rem 2rem;
+
+    display: flex;
+    align-items: center;
+
     background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 20px;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.5rem;
 }
 
-.photos-list article img {
-    width: 100px;
-    height: 100px;
+.search form:hover {
+    box-shadow: 0.1rem 0.1rem 0.5rem #ddd;
+}
+
+.search form input {
+    width: 100%;
+    border: 0;
+
+    font-size: 1.5rem;
+}
+
+.search form input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.search form input[type=number] {
+    -moz-appearance:textfield;
+}
+
+::placeholder {
+    color: #aaaaaa;
+}
+
+.search form .searchByCode {
+    padding-right: 2rem;
+
+    display: flex;
+    align-items: center;
+
+    background: none;
+    border: 0;
+
+    cursor: pointer;
+}
+
+.search form .clearSearch {
+    display: flex;
+    align-items: center;
+
+    background: #fff;
+    border: none;
+    border-radius: 0.5rem;
+
+    cursor: pointer;
 }
 
 
-.photos-list .actions {
+#main .content {
+    width: 80vw;
+    padding: 2rem 5rem;
+    margin-bottom: 2rem;
+
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+
+    background: #fff;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem #ddd;
+}
+
+#main article {
+    display: flex;
+    align-items: center;
+}
+
+#main article img {
+    width: 10rem;
+    height: 10rem;
+
+    border-radius: 2rem;
+}
+
+#main .description {
+    height: 100%;
+    padding: 0 5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#main .description img {
+    width: 4rem;
+    height: 4rem;
+}
+
+#main .description strong {
+    display: flex;
+
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#main .description h1 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+
+/* #main .actions {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-}
+} */
 
 /* .photos-list .actions button {
     padding: 10px;
