@@ -1,0 +1,90 @@
+#main {
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    width: 80vw;
+    padding: 2rem 5rem;
+    margin-bottom: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    background: #fff;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem #ddd;
+
+    position: relative;
+}
+
+.content article {
+    display: flex;
+    align-items: center;
+}
+
+.content article img {
+    width: 10rem;
+    height: 10rem;
+
+    border-radius: 2rem;
+}
+
+.content .description {
+    height: 100%;
+    padding: 0 5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content .description h1 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.content .description .idS {
+    display: grid;
+    grid-template-columns: 5rem 10rem;
+}
+
+.content .description .idS img {
+    width: 4rem;
+    height: 4rem;
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.content .description .idS strong {
+    display: flex;
+
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.content button {
+    width: 3rem;
+    height: 3rem;
+
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    background: #fff;
+    border: none;
+}
+
+.content .favorite {
+    color: red;
+    cursor: pointer;
+}
+
+.content .favorite:hover {
+    opacity: 0.5;
+}

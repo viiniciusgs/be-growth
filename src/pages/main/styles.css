@@ -157,33 +157,11 @@
     color: red;
 }
 
-
-/* #main .actions {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-} */
-
-/* .photos-list .actions button {
-    padding: 10px;
-    border-radius: 5px;
-    border: 0;
-    background: #da552f;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
+.actions .pagination {
+    padding: 2rem;
 }
 
-.photos-list .actions button[disabled] {
-    opacity: 0.7;
-    cursor: default;
+.actions .pagination .MuiButtonBase-root {
+    width: 4rem;
+    height: 4rem;
 }
-
-.photos-list .actions button:not([disabled]):hover {
-    opacity: 0.9;
-}
-
-.MuiButtonBase-root .Mui-selected {
-    color: black;
-} */

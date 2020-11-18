@@ -6,9 +6,7 @@ import Header from '../../components/Header';
 
 import Pagination from '@material-ui/lab/Pagination';
 import { AiOutlineSearch } from 'react-icons/ai';
-import { MdClear } from 'react-icons/md';
-import { MdFavorite } from 'react-icons/md';
-import { MdFavoriteBorder } from 'react-icons/md';
+import { MdClear, MdFavorite, MdFavoriteBorder } from 'react-icons/md';
 
 import './styles.css';
 
