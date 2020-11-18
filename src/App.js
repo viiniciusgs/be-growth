@@ -1,11 +1,9 @@
 import Routes from './routes';
-import './styles.css';
 
-import Header from './components/Header';
+import './styles.css';
 
 const App = () => (
   <div className="App">
-    <Header />
     <Routes />
   </div>
 );
