@@ -106,11 +106,6 @@
     justify-content: space-between;
 }
 
-.content .description h1 {
-    font-size: 2rem;
-    font-weight: 300;
-}
-
 .content .description .idS {
     display: grid;
     grid-template-columns: 5rem 10rem;
@@ -129,6 +124,11 @@
 
     font-size: 1.5rem;
     font-weight: 500;
+}
+
+.content .description h1 {
+    font-size: 2rem;
+    font-weight: 300;
 }
 
 .content button {
@@ -161,9 +161,8 @@
     padding: 2rem;
 }
 
-.actions .pagination .MuiButtonBase-root {
-    width: 4rem;
-    height: 4rem;
+.actions .pagination .MuiPagination-ul {
+    justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -173,7 +172,7 @@
     }
 
     .content {
-        height: 50vh;
+        height: clamp(35rem, 50vh, 50rem);
     }
 
     .content article {

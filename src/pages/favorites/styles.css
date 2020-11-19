@@ -98,7 +98,7 @@
     }
 
     .content {
-        height: 50vh;
+        height: clamp(35rem, 50vh, 50rem);
     }
 
     .content article {

@@ -105,7 +105,7 @@ export default class Main extends Component {
                         <button 
                             onClick={() => {
                                 this.favorites(searchPhoto.id);
-                                this.loadPhotos();
+                                this.loadPhotos(this.state.page);
                             }}
                         >
                             {
@@ -153,7 +153,7 @@ export default class Main extends Component {
                                 <button 
                                     onClick={() => {
                                         this.favorites(photo.id);
-                                        this.loadPhotos();
+                                        this.loadPhotos(this.state.page);
                                     }}
                                 >
                                     {
@@ -166,7 +166,7 @@ export default class Main extends Component {
     
                     <div className="actions">
                         <div className="pagination">
-                            <Pagination count={10} color='primary' variant="outlined" shape="rounded" onChange={(event, page) => {
+                            <Pagination count={500} size='large' shape="rounded" onChange={(event, page) => {
                                 this.loadPhotos(page);
                             }} />
                         </div>
