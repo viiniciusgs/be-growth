@@ -88,3 +88,36 @@
 .content .favorite:hover {
     opacity: 0.5;
 }
+
+@media screen and (max-width: 768px) {
+    #main {
+        position: relative;
+        top: 8rem;
+
+        text-align: center;
+    }
+
+    .content {
+        height: 50vh;
+    }
+
+    .content article {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .content .description {
+        padding: 2rem 0 0;
+    }
+
+    .content .description .idS {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content .description h1 {
+        text-align: center;
+        padding-top: 2rem;
+    }
+}

@@ -15,6 +15,7 @@ body {
     color: #333;
 }
 
-a {
+a, ul {
     text-decoration: none;
+    list-style: none;
 }

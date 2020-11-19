@@ -1,17 +1,48 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import { NavLink } from 'react-router-dom';
 
+import { GiHamburgerMenu } from 'react-icons/gi';
+
 import './styles.css';
 
-const Header = () => (
-    <header id="main-header">
-        <h1><strong>BE</strong>GROWTH</h1>
-        <nav>
-            <NavLink exact to="/" className="pages" activeClassName="currentPage">HOME</NavLink>
-            <NavLink to="/favoritos" className="pages" activeClassName="currentPage">FAVORITOS</NavLink>
-        </nav>
-    </header>
-);
+export default class Header extends Component {
+    state = {
+        navClass: 'nav-links'
+    }
 
-export default Header;
+    render () {
+        const { navClass } = this.state;
+
+        return (
+            <header id="main-header">
+                <nav>
+                    <div className="logo">
+                        <h1><strong>BE</strong>GROWTH</h1>
+                    </div>
+
+                    <ul className={navClass}>
+                        <li>
+                            <NavLink exact to="/" className="pages" activeClassName="currentPage">HOME</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/favoritos" className="pages"  activeClassName="currentPage">FAVORITOS</NavLink>
+                        </li>
+                    </ul>
+
+                    <div className="burguer" 
+                        onClick={() => {
+                            if(navClass === 'nav-links') {
+                                this.setState({navClass: 'nav-links nav-active'});
+                            } else {
+                                this.setState({navClass: 'nav-links'});
+                            }
+                        }}
+                    >
+                        <GiHamburgerMenu size={20} />
+                    </div>
+                </nav>
+            </header>
+        );
+    }
+}
