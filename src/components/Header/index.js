@@ -18,7 +18,7 @@ export default class Header extends Component {
             <header id="main-header">
                 <nav>
                     <div className="logo">
-                        <h1><strong>BE</strong>GROWTH</h1>
+                        <h1>Projeto em <strong>React</strong></h1>
                     </div>
 
                     <ul className={navClass}>
